@@ -1,0 +1,23 @@
+.canvas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.canvas-block {
+    width: 40rem;
+    height: 40rem;
+    border: 1px solid black;
+}
+
+button {
+    width: 10rem;
+    height: 2rem;
+    color: white;
+    background: blue;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
