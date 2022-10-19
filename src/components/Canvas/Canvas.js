@@ -47,6 +47,11 @@ const Canvas = () => {
         setIsDrawing(false);
     }
 
+    const clearCanvas = () => {
+        let context = canvasRef.current.getContext("2d");
+        context.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+    }
+
     return (
         <div className={'canvas'}>
             <canvas className={'canvas-block'}
@@ -58,7 +63,7 @@ const Canvas = () => {
             </canvas>
 
             <div>
-                <button>click</button>
+                <button onClick={() => clearCanvas()}>click</button>
             </div>
 
         </div>
