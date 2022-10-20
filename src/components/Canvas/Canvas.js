@@ -15,14 +15,13 @@ const Canvas = () => {
         canvas.height=500;
 
         let context = canvas.getContext("2d");
-        context.lineCap = "round";
+        context.lineCap = "square";
         context.strokeStyle = "black";
         context.lineWidth = 2;
         contextRef.current = context;
     }, [])
 
     const mouseDown = ({nativeEvent}) => {
-        console.log(nativeEvent);
         const {offsetX, offsetY} = nativeEvent;
         contextRef.current.beginPath();
         contextRef.current.moveTo(offsetX, offsetY);
@@ -63,7 +62,7 @@ const Canvas = () => {
             </canvas>
 
             <div>
-                <button onClick={() => clearCanvas()}>click</button>
+                <button onClick={() => clearCanvas()}>clear</button>
             </div>
 
         </div>
