@@ -17,7 +17,7 @@ const Canvas = () => {
         let context = canvas.getContext("2d");
         context.lineCap = "square";
         context.strokeStyle = "black";
-        context.lineWidth = 2;
+        context.lineWidth = 3;
         contextRef.current = context;
     }, [])
 
